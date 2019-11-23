@@ -54,11 +54,11 @@ class Todo(Model):
         t.save()
         return t
 	
-	def time(self):
-		date_format = '%H:%M:%S'
-		value = time.localtime(self.ct)
-		dt = time.strftime(date_format, value)
-		return dt
+    def time(self):
+	date_format = '%H:%M:%S'
+	value = time.localtime(self.ct)
+	dt = time.strftime(date_format, value)
+	return dt
 
     def __init__(self, form):
         self.id = None
